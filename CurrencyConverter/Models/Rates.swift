@@ -8,22 +8,6 @@
 
 import Foundation
 
-struct Rates: Codable {
-
-    var eur: Double?
-    var gbp: Double?
-    var jpy: Double?
-    var brl: Double?
-    var usd: Double?
-
-    private enum CodingKeys: String, CodingKey {
-        case eur = "EUR"
-        case gbp = "GBP"
-        case jpy = "JPY"
-        case usd = "USD"
-    }
-}
-
 enum Rate: String {
     case eur = "EUR"
     case gbp = "GBP"
@@ -46,7 +30,5 @@ enum Rate: String {
         }
     }
 
-    var allRates: [Rate] {
-        return [.gbp, .eur, .jpy, .brl, .usd]
-    }
+    static let allRates: [Rate] = [.gbp, .eur, .jpy, .brl, .usd]
 }

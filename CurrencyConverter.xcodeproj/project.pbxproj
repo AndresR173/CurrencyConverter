@@ -16,7 +16,6 @@
 		BA44EC4F23884ED8007F247A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4E23884ED8007F247A /* Errors.swift */; };
 		BA44EC5223885A02007F247A /* CurrencyConverterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5123885A02007F247A /* CurrencyConverterPresenter.swift */; };
 		BA44EC5423885A82007F247A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5323885A82007F247A /* MainViewController.swift */; };
-		BA44EC5923885D75007F247A /* RatesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5823885D75007F247A /* RatesHelper.swift */; };
 		BA5677F423882E00009ACD44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F323882E00009ACD44 /* AppDelegate.swift */; };
 		BA5677F823882E00009ACD44 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F723882E00009ACD44 /* BaseViewController.swift */; };
 		BA5677FE23882E00009ACD44 /* CurrencyConverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */; };
@@ -45,7 +44,6 @@
 		BA44EC4E23884ED8007F247A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		BA44EC5123885A02007F247A /* CurrencyConverterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterPresenter.swift; sourceTree = "<group>"; };
 		BA44EC5323885A82007F247A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BA44EC5823885D75007F247A /* RatesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesHelper.swift; sourceTree = "<group>"; };
 		BA5677F023882E00009ACD44 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5677F323882E00009ACD44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA5677F723882E00009ACD44 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -164,14 +162,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		BA44EC5723885D63007F247A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				BA44EC5823885D75007F247A /* RatesHelper.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		BA5677E723882E00009ACD44 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +185,6 @@
 			children = (
 				BA44EC3B23882F60007F247A /* App */,
 				BA44EC3C23883055007F247A /* Controllers */,
-				BA44EC5723885D63007F247A /* Helpers */,
 				BA44EC42238847C7007F247A /* Models */,
 				BA44EC50238859EF007F247A /* Presenter */,
 				BA44EC4723884B21007F247A /* Repository */,
@@ -319,7 +308,6 @@
 				BA44EC5223885A02007F247A /* CurrencyConverterPresenter.swift in Sources */,
 				BA44EC5423885A82007F247A /* MainViewController.swift in Sources */,
 				BA44EC4D23884DFA007F247A /* Date+Extensions.swift in Sources */,
-				BA44EC5923885D75007F247A /* RatesHelper.swift in Sources */,
 				BA5677F823882E00009ACD44 /* BaseViewController.swift in Sources */,
 				BA5677FE23882E00009ACD44 /* CurrencyConverter.xcdatamodeld in Sources */,
 				BA44EC4B23884B79007F247A /* RatesResponse.swift in Sources */,

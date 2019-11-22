@@ -9,9 +9,7 @@
 import Foundation
 
 struct RatesResponse: Codable {
-    var sucess: Bool?
-    var timeStamp: Double?
     var base: String?
     var date: Date?
-    var rates: Rates?
+    var rates: [String: Double]
 }

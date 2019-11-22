@@ -20,7 +20,6 @@ class ConverterRepository {
         }
 
         components.queryItems = [
-            URLQueryItem(name: Constants.Networking.QueryItems.ACCESS_KEY, value: Constants.API_ACCESS_KEY),
             URLQueryItem(name: Constants.Networking.QueryItems.BASE, value: base.rawValue),
             URLQueryItem(name: Constants.Networking.QueryItems.SYMBOLS, value: symbols)
         ]
@@ -30,9 +29,12 @@ class ConverterRepository {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: finalURL) { data, _, error in
+        let task = URLSession.shared.dataTask(with: finalURL) { data, resp , error in
             guard let data = data else {
-                completion(Result.failure(error ?? NetworkingError.noResponse))
+                DispatchQueue.main.async {
+                    completion(Result.failure(error ?? NetworkingError.noResponse))
+                }
+
                 return
             }
 
@@ -41,16 +43,19 @@ class ConverterRepository {
 
             do {
                 let response = try decoder.decode(RatesResponse.self, from: data)
+                DispatchQueue.main.async {
+                    completion(Result.success(response))
+                }
 
-                completion(Result.success(response))
             } catch {
-                completion(Result.failure(NetworkingError.parsingError))
+                DispatchQueue.main.async {
+                    completion(Result.failure(NetworkingError.parsingError))
+                }
+
                 return
             }
         }
 
         task.resume()
-
-        completion(Result.success(RatesResponse()))
     }
 }

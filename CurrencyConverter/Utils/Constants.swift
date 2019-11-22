@@ -10,12 +10,10 @@ import Foundation
 
 struct Constants {
 
-    static let API_ACCESS_KEY = "5cb21c23afd3660813fdf07fd8d96c74"
-
     struct Networking {
 
         static func getBaseURL() -> URL? {
-            return URL(string: "http://data.fixer.io/api/")
+            return URL(string: "https://api.exchangeratesapi.io/")
         }
 
         struct Endpoint {
@@ -24,7 +22,7 @@ struct Constants {
 
         struct QueryItems {
             static let BASE = "base"
-            static let SYMBOLS = "smbols"
+            static let SYMBOLS = "symbols"
             static let ACCESS_KEY = "access_key"
         }
     }
