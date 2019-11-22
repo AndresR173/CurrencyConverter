@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA44EC4123883827007F247A /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4023883827007F247A /* ViewController+Extensions.swift */; };
+		BA44EC44238847D3007F247A /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC43238847D3007F247A /* Rates.swift */; };
+		BA44EC4623884A4E007F247A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4523884A4E007F247A /* Constants.swift */; };
+		BA44EC4923884B37007F247A /* ConverterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4823884B37007F247A /* ConverterRepository.swift */; };
+		BA44EC4B23884B79007F247A /* RatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4A23884B79007F247A /* RatesResponse.swift */; };
+		BA44EC4D23884DFA007F247A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4C23884DFA007F247A /* Date+Extensions.swift */; };
+		BA44EC4F23884ED8007F247A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4E23884ED8007F247A /* Errors.swift */; };
+		BA44EC5223885A02007F247A /* CurrencyConverterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5123885A02007F247A /* CurrencyConverterPresenter.swift */; };
+		BA44EC5423885A82007F247A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5323885A82007F247A /* MainViewController.swift */; };
+		BA44EC5923885D75007F247A /* RatesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC5823885D75007F247A /* RatesHelper.swift */; };
 		BA5677F423882E00009ACD44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F323882E00009ACD44 /* AppDelegate.swift */; };
-		BA5677F823882E00009ACD44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F723882E00009ACD44 /* ViewController.swift */; };
+		BA5677F823882E00009ACD44 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5677F723882E00009ACD44 /* BaseViewController.swift */; };
 		BA5677FE23882E00009ACD44 /* CurrencyConverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */; };
 		BA56780023882E04009ACD44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5677FF23882E04009ACD44 /* Assets.xcassets */; };
 		BA56780323882E04009ACD44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56780123882E04009ACD44 /* LaunchScreen.storyboard */; };
@@ -26,9 +36,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA44EC4023883827007F247A /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		BA44EC43238847D3007F247A /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		BA44EC4523884A4E007F247A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA44EC4823884B37007F247A /* ConverterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterRepository.swift; sourceTree = "<group>"; };
+		BA44EC4A23884B79007F247A /* RatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesResponse.swift; sourceTree = "<group>"; };
+		BA44EC4C23884DFA007F247A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		BA44EC4E23884ED8007F247A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		BA44EC5123885A02007F247A /* CurrencyConverterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterPresenter.swift; sourceTree = "<group>"; };
+		BA44EC5323885A82007F247A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BA44EC5823885D75007F247A /* RatesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesHelper.swift; sourceTree = "<group>"; };
 		BA5677F023882E00009ACD44 /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5677F323882E00009ACD44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA5677F723882E00009ACD44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA5677F723882E00009ACD44 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BA5677FD23882E00009ACD44 /* CurrencyConverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CurrencyConverter.xcdatamodel; sourceTree = "<group>"; };
 		BA5677FF23882E04009ACD44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA56780223882E04009ACD44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,7 +79,9 @@
 		BA44EC3823882F02007F247A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BA44EC3F2388380C007F247A /* Extensions */,
 				BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */,
+				BA44EC4523884A4E007F247A /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -77,7 +99,8 @@
 		BA44EC3C23883055007F247A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA5677F723882E00009ACD44 /* ViewController.swift */,
+				BA44EC5523885BF2007F247A /* Main */,
+				BA44EC5623885C09007F247A /* Base */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,6 +111,65 @@
 				BA5677FF23882E04009ACD44 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA44EC3F2388380C007F247A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC4023883827007F247A /* ViewController+Extensions.swift */,
+				BA44EC4C23884DFA007F247A /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA44EC42238847C7007F247A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC43238847D3007F247A /* Rates.swift */,
+				BA44EC4A23884B79007F247A /* RatesResponse.swift */,
+				BA44EC4E23884ED8007F247A /* Errors.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA44EC4723884B21007F247A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC4823884B37007F247A /* ConverterRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BA44EC50238859EF007F247A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC5123885A02007F247A /* CurrencyConverterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BA44EC5523885BF2007F247A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC5323885A82007F247A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BA44EC5623885C09007F247A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BA5677F723882E00009ACD44 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BA44EC5723885D63007F247A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA44EC5823885D75007F247A /* RatesHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BA5677E723882E00009ACD44 = {
@@ -113,6 +195,10 @@
 			children = (
 				BA44EC3B23882F60007F247A /* App */,
 				BA44EC3C23883055007F247A /* Controllers */,
+				BA44EC5723885D63007F247A /* Helpers */,
+				BA44EC42238847C7007F247A /* Models */,
+				BA44EC50238859EF007F247A /* Presenter */,
+				BA44EC4723884B21007F247A /* Repository */,
 				BA44EC3E2388307B007F247A /* Resources */,
 				BA44EC3823882F02007F247A /* Utils */,
 			);
@@ -228,9 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5677F823882E00009ACD44 /* ViewController.swift in Sources */,
+				BA44EC4123883827007F247A /* ViewController+Extensions.swift in Sources */,
+				BA44EC44238847D3007F247A /* Rates.swift in Sources */,
+				BA44EC5223885A02007F247A /* CurrencyConverterPresenter.swift in Sources */,
+				BA44EC5423885A82007F247A /* MainViewController.swift in Sources */,
+				BA44EC4D23884DFA007F247A /* Date+Extensions.swift in Sources */,
+				BA44EC5923885D75007F247A /* RatesHelper.swift in Sources */,
+				BA5677F823882E00009ACD44 /* BaseViewController.swift in Sources */,
 				BA5677FE23882E00009ACD44 /* CurrencyConverter.xcdatamodeld in Sources */,
+				BA44EC4B23884B79007F247A /* RatesResponse.swift in Sources */,
+				BA44EC4F23884ED8007F247A /* Errors.swift in Sources */,
 				BA5677F423882E00009ACD44 /* AppDelegate.swift in Sources */,
+				BA44EC4623884A4E007F247A /* Constants.swift in Sources */,
+				BA44EC4923884B37007F247A /* ConverterRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL5CTQ2N5S;
-				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL5CTQ2N5S;
-				INFOPLIST_FILE = CurrencyConverter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
