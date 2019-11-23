@@ -24,6 +24,18 @@
 		BA56780E23882E04009ACD44 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56780D23882E04009ACD44 /* CurrencyConverterTests.swift */; };
 		BADB8B19238968830084B841 /* CurrencyConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B18238968830084B841 /* CurrencyConverterView.swift */; };
 		BADB8B1B238969A30084B841 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BADB8B1A238969A30084B841 /* Localizable.strings */; };
+		BADB8B242389736C0084B841 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B1F2389736B0084B841 /* ArrayExtension.swift */; };
+		BADB8B252389736C0084B841 /* DataEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B202389736B0084B841 /* DataEntry.swift */; };
+		BADB8B262389736C0084B841 /* UIBezierPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B212389736C0084B841 /* UIBezierPathExtension.swift */; };
+		BADB8B272389736C0084B841 /* CustomSegments.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B222389736C0084B841 /* CustomSegments.swift */; };
+		BADB8B282389736C0084B841 /* CALayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B232389736C0084B841 /* CALayerExtension.swift */; };
+		BADB8B2D238973820084B841 /* BeautifulBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B2A238973820084B841 /* BeautifulBarChartPresenter.swift */; };
+		BADB8B2E238973820084B841 /* BeautifulBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B2B238973820084B841 /* BeautifulBarEntry.swift */; };
+		BADB8B2F238973820084B841 /* BeautifulBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B2C238973820084B841 /* BeautifulBarChart.swift */; };
+		BADB8B34238973970084B841 /* BasicBarChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B31238973970084B841 /* BasicBarChartPresenter.swift */; };
+		BADB8B35238973970084B841 /* BasicBarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B32238973970084B841 /* BasicBarEntry.swift */; };
+		BADB8B36238973970084B841 /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB8B33238973970084B841 /* BasicBarChart.swift */; };
+		BADB8B38238973A20084B841 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BADB8B37238973A20084B841 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +70,18 @@
 		BA56780F23882E04009ACD44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADB8B18238968830084B841 /* CurrencyConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterView.swift; sourceTree = "<group>"; };
 		BADB8B1A238969A30084B841 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BADB8B1F2389736B0084B841 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BADB8B202389736B0084B841 /* DataEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntry.swift; sourceTree = "<group>"; };
+		BADB8B212389736C0084B841 /* UIBezierPathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtension.swift; sourceTree = "<group>"; };
+		BADB8B222389736C0084B841 /* CustomSegments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegments.swift; sourceTree = "<group>"; };
+		BADB8B232389736C0084B841 /* CALayerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtension.swift; sourceTree = "<group>"; };
+		BADB8B2A238973820084B841 /* BeautifulBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarChartPresenter.swift; sourceTree = "<group>"; };
+		BADB8B2B238973820084B841 /* BeautifulBarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarEntry.swift; sourceTree = "<group>"; };
+		BADB8B2C238973820084B841 /* BeautifulBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautifulBarChart.swift; sourceTree = "<group>"; };
+		BADB8B31238973970084B841 /* BasicBarChartPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChartPresenter.swift; sourceTree = "<group>"; };
+		BADB8B32238973970084B841 /* BasicBarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarEntry.swift; sourceTree = "<group>"; };
+		BADB8B33238973970084B841 /* BasicBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
+		BADB8B37238973A20084B841 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +105,10 @@
 		BA44EC3823882F02007F247A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BA44EC3F2388380C007F247A /* Extensions */,
-				BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */,
+				BADB8B1C238972FC0084B841 /* ThirdParty */,
 				BA44EC4523884A4E007F247A /* Constants.swift */,
+				BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */,
+				BA44EC3F2388380C007F247A /* Extensions */,
 				BADB8B1A238969A30084B841 /* Localizable.strings */,
 			);
 			path = Utils;
@@ -128,9 +153,9 @@
 		BA44EC42238847C7007F247A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA44EC4E23884ED8007F247A /* Errors.swift */,
 				BA44EC43238847D3007F247A /* Rates.swift */,
 				BA44EC4A23884B79007F247A /* RatesResponse.swift */,
-				BA44EC4E23884ED8007F247A /* Errors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +232,57 @@
 				BA56780F23882E04009ACD44 /* Info.plist */,
 			);
 			path = CurrencyConverterTests;
+			sourceTree = "<group>";
+		};
+		BADB8B1C238972FC0084B841 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				BADB8B1D2389733D0084B841 /* BarChart */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		BADB8B1D2389733D0084B841 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				BADB8B37238973A20084B841 /* LICENSE */,
+				BADB8B30238973880084B841 /* BasicBarChart */,
+				BADB8B29238973710084B841 /* BeautifulChart */,
+				BADB8B1E2389734A0084B841 /* Shared */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		BADB8B1E2389734A0084B841 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BADB8B1F2389736B0084B841 /* ArrayExtension.swift */,
+				BADB8B232389736C0084B841 /* CALayerExtension.swift */,
+				BADB8B222389736C0084B841 /* CustomSegments.swift */,
+				BADB8B202389736B0084B841 /* DataEntry.swift */,
+				BADB8B212389736C0084B841 /* UIBezierPathExtension.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BADB8B29238973710084B841 /* BeautifulChart */ = {
+			isa = PBXGroup;
+			children = (
+				BADB8B2C238973820084B841 /* BeautifulBarChart.swift */,
+				BADB8B2A238973820084B841 /* BeautifulBarChartPresenter.swift */,
+				BADB8B2B238973820084B841 /* BeautifulBarEntry.swift */,
+			);
+			path = BeautifulChart;
+			sourceTree = "<group>";
+		};
+		BADB8B30238973880084B841 /* BasicBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				BADB8B33238973970084B841 /* BasicBarChart.swift */,
+				BADB8B31238973970084B841 /* BasicBarChartPresenter.swift */,
+				BADB8B32238973970084B841 /* BasicBarEntry.swift */,
+			);
+			path = BasicBarChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +368,7 @@
 			files = (
 				BA56780323882E04009ACD44 /* LaunchScreen.storyboard in Resources */,
 				BA56780023882E04009ACD44 /* Assets.xcassets in Resources */,
+				BADB8B38238973A20084B841 /* LICENSE in Resources */,
 				BADB8B1B238969A30084B841 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,16 +390,27 @@
 				BA44EC4123883827007F247A /* ViewController+Extensions.swift in Sources */,
 				BA44EC44238847D3007F247A /* Rates.swift in Sources */,
 				BADB8B19238968830084B841 /* CurrencyConverterView.swift in Sources */,
+				BADB8B35238973970084B841 /* BasicBarEntry.swift in Sources */,
 				BA44EC5223885A02007F247A /* CurrencyConverterPresenter.swift in Sources */,
 				BA44EC5423885A82007F247A /* CurrencyConvernterViewController.swift in Sources */,
 				BA44EC4D23884DFA007F247A /* Date+Extensions.swift in Sources */,
+				BADB8B36238973970084B841 /* BasicBarChart.swift in Sources */,
+				BADB8B252389736C0084B841 /* DataEntry.swift in Sources */,
 				BA5677F823882E00009ACD44 /* BaseViewController.swift in Sources */,
 				BA5677FE23882E00009ACD44 /* CurrencyConverter.xcdatamodeld in Sources */,
 				BA44EC4B23884B79007F247A /* RatesResponse.swift in Sources */,
 				BA44EC4F23884ED8007F247A /* Errors.swift in Sources */,
 				BA5677F423882E00009ACD44 /* AppDelegate.swift in Sources */,
+				BADB8B272389736C0084B841 /* CustomSegments.swift in Sources */,
+				BADB8B242389736C0084B841 /* ArrayExtension.swift in Sources */,
+				BADB8B34238973970084B841 /* BasicBarChartPresenter.swift in Sources */,
+				BADB8B2E238973820084B841 /* BeautifulBarEntry.swift in Sources */,
 				BA44EC4623884A4E007F247A /* Constants.swift in Sources */,
+				BADB8B282389736C0084B841 /* CALayerExtension.swift in Sources */,
 				BA44EC4923884B37007F247A /* ConverterRepository.swift in Sources */,
+				BADB8B2D238973820084B841 /* BeautifulBarChartPresenter.swift in Sources */,
+				BADB8B2F238973820084B841 /* BeautifulBarChart.swift in Sources */,
+				BADB8B262389736C0084B841 /* UIBezierPathExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

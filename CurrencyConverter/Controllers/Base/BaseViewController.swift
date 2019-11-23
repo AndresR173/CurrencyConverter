@@ -30,6 +30,5 @@ class BaseViewController<View: UIView>: UIViewController {
         view = View(frame: UIScreen.main.bounds)
     }
 
-
 }
 

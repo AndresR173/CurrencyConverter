@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Rate: String {
     case eur = "EUR"
@@ -27,6 +28,21 @@ enum Rate: String {
             return "Brazil Reais"
         case .usd:
             return "US Dollar"
+        }
+    }
+
+    var color: UIColor {
+        switch self {
+        case .eur:
+            return .systemRed
+        case .gbp:
+            return .systemBlue
+        case .jpy:
+            return .systemOrange
+        case .brl:
+            return .systemYellow
+        case .usd:
+            return .systemGreen
         }
     }
 

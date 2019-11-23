@@ -20,6 +20,10 @@ class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView
         super.viewDidLoad()
 
         presenter.attachView(self)
+
+        self.customView.textFieldHandler = { [weak self] text in
+            self?.presenter.didEnterValue(text)
+        }
     }
 
 }
@@ -27,8 +31,8 @@ class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView
 // MARK: - CurrencyPresenter Delegate
 
 extension CurrencyConvernterViewController: CurrencyConverterPresenterView {
-    func didConvertRatesSuccess() {
-
+    func displayValues(_ values: [DataEntry], animated: Bool) {
+        self.customView.updateDataEntries(values, animated: animated)
     }
 
     func didConvertRatesFailure() {

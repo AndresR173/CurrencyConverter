@@ -37,6 +37,7 @@ class CurrencyConverterView: UIView {
         textField.keyboardType = .numberPad
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         textField.layer.cornerRadius = 7
+        textField.textAlignment = .center
 
         if #available(iOS 13.0, *) {
             textField.backgroundColor = .systemGray5
@@ -59,6 +60,13 @@ class CurrencyConverterView: UIView {
         stackView.addArrangedSubview(billsTextField)
 
         return stackView
+    }()
+
+    private lazy var barChart: BasicBarChart = {
+        let barChart = BasicBarChart()
+        barChart.translatesAutoresizingMaskIntoConstraints = false
+
+        return barChart
     }()
 
     // MARK: - Properties
@@ -91,6 +99,7 @@ class CurrencyConverterView: UIView {
 
         addSubview(titleLabel)
         addSubview(stackView)
+        addSubview(barChart)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: readableContentGuide.topAnchor, constant: 16),
@@ -100,6 +109,11 @@ class CurrencyConverterView: UIView {
             stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+
+            barChart.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
+            barChart.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            barChart.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            barChart.bottomAnchor.constraint(equalTo: readableContentGuide.bottomAnchor)
         ])
     }
 
@@ -107,6 +121,10 @@ class CurrencyConverterView: UIView {
 
     @objc private func textFieldDidChange(_ textField: UITextField) {
         textFieldHandler?(textField.text)
+    }
+
+    func updateDataEntries(_ dataEntries: [DataEntry], animated: Bool) {
+        barChart.updateDataEntries(dataEntries: dataEntries, animated: animated)
     }
 
 }
