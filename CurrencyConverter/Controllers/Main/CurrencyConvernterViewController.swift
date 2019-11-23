@@ -8,24 +8,25 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView> {
 
     // MARK: - Properties
 
-    private lazy var presenter: CurrencyConverterPresenter = {
-        return CurrencyConverterPresenter(self)
-    }()
+    private let presenter = CurrencyConverterPresenter()
+
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        presenter.didEnterValue("2")
+        presenter.attachView(self)
     }
-
 
 }
 
-extension MainViewController: CurrencyConverterView {
+// MARK: - CurrencyPresenter Delegate
+
+extension CurrencyConvernterViewController: CurrencyConverterPresenterView {
     func didConvertRatesSuccess() {
 
     }

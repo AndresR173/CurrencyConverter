@@ -1,0 +1,10 @@
+/* 
+  File.strings
+  CurrencyConverter
+
+  Created by Andres Rojas on 23/11/19.
+  Copyright © 2019 Andres Rojas. All rights reserved.
+*/
+
+"converter.title" = "Currency Converter";
+"converter.description" = "Please enter the number of dollar bills";

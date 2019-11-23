@@ -8,22 +8,32 @@
 
 import Foundation
 
-protocol CurrencyConverterView: class {
+protocol CurrencyConverterPresenterView: class {
     func didConvertRatesSuccess()
     func didConvertRatesFailure()
 }
 
 class CurrencyConverterPresenter {
 
-    private weak var view: CurrencyConverterView?
+    // MARK: - Properties
 
-    init( _ view: CurrencyConverterView?) {
-        self.view = view
+    typealias CurrencyRate = (Rate, Double)
 
+    private weak var view: CurrencyConverterPresenterView?
+
+    private var rates: [CurrencyRate]?
+
+    // MARK: - LifeCycle
+
+    init() {
         getRates()
     }
 
     // MARK: - Helpers
+
+    func attachView(_ view: CurrencyConverterPresenterView?) {
+        self.view = view
+    }
 
     func didEnterValue(_ value: String) {
 
@@ -38,18 +48,18 @@ class CurrencyConverterPresenter {
             return nil
         }.joined(separator: ",")
 
-        ConverterRepository.getRates(from: from, to: symbols) { result in
+        ConverterRepository.getRates(from: from, to: symbols) { [weak self] result in
             switch result {
             case .success(let response):
-                let rates: [(Rate, Double)] = response.rates.compactMap {
+                let rates: [CurrencyRate] = response.rates.compactMap {
                     guard let rate = Rate(rawValue: $0.key) else { return nil}
 
                     return (rate, $0.value)
                 }
 
-                dump(rates)
-            case .failure(let error):
-                print(error.localizedDescription)
+                self?.rates = rates
+            case .failure(_):
+                self?.rates = nil
                 break
             }
         }
