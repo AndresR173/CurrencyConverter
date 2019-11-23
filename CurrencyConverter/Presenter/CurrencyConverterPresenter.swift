@@ -10,7 +10,6 @@ import Foundation
 
 protocol CurrencyConverterPresenterView: class {
     func displayValues(_ values: [DataEntry], animated: Bool)
-    func didConvertRatesFailure()
 }
 
 typealias CurrencyRate = (Rate, Double)
@@ -67,7 +66,6 @@ class CurrencyConverterPresenter {
     }
 
     private func getRates() {
-
         let symbols: String = Rate.allRates.compactMap {
             if $0 != base {
                 return $0.rawValue

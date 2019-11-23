@@ -106,11 +106,11 @@ class CurrencyConverterView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
 
-            stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
 
-            barChart.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
+            barChart.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 40),
             barChart.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             barChart.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             barChart.bottomAnchor.constraint(equalTo: readableContentGuide.bottomAnchor)
