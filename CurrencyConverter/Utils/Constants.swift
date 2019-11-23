@@ -13,11 +13,11 @@ struct Constants {
     struct Networking {
 
         static func getBaseURL() -> URL? {
-            return URL(string: "https://api.exchangeratesapi.io/")
+            return URL(string: "https://api.exchangerate-api.com")
         }
 
         struct Endpoint {
-            static let LATEST = "latest"
+            static let LATEST = "v4/latest"
         }
 
         struct QueryItems {

@@ -25,6 +25,12 @@ class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView
             self?.presenter.didEnterValue(text)
         }
 
+        self.customView.indexChangeHandler = { [weak self] index in
+            self?.presenter.updateRates(for: index)
+        }
+
+        presenter.updateRates(for: 0)
+
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
