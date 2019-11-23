@@ -22,6 +22,15 @@ class CurrencyConverterView: UIView {
         return label
     }()
 
+    private lazy var ratesSegmentedControl: UISegmentedControl = {
+        let segmentedControl = UISegmentedControl(items: Rate.availableRates)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        segmentedControl.addTarget(self, action: #selector(segmentedControlIndexDidChange), for: .valueChanged)
+        segmentedControl.selectedSegmentIndex = 0
+
+        return segmentedControl
+    }()
+
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -62,8 +71,8 @@ class CurrencyConverterView: UIView {
         return stackView
     }()
 
-    private lazy var barChart: BasicBarChart = {
-        let barChart = BasicBarChart()
+    private lazy var barChart: BeautifulBarChart = {
+        let barChart = BeautifulBarChart()
         barChart.translatesAutoresizingMaskIntoConstraints = false
 
         return barChart
@@ -72,8 +81,10 @@ class CurrencyConverterView: UIView {
     // MARK: - Properties
 
     typealias ChangeHandler = (String?) -> Void
+    typealias IndexChangeHandler = (Int) -> Void
 
     var textFieldHandler: ChangeHandler?
+    var indexChangeHandler: IndexChangeHandler?
 
     // MARK: - LifeCycle
 
@@ -100,11 +111,15 @@ class CurrencyConverterView: UIView {
         addSubview(titleLabel)
         addSubview(stackView)
         addSubview(barChart)
+        addSubview(ratesSegmentedControl)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: readableContentGuide.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+
+            ratesSegmentedControl.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
+            ratesSegmentedControl.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -125,6 +140,10 @@ class CurrencyConverterView: UIView {
 
     func updateDataEntries(_ dataEntries: [DataEntry], animated: Bool) {
         barChart.updateDataEntries(dataEntries: dataEntries, animated: animated)
+    }
+
+    @objc private func segmentedControlIndexDidChange() {
+        indexChangeHandler?(ratesSegmentedControl.selectedSegmentIndex)
     }
 
 }

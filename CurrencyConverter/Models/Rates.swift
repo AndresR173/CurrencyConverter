@@ -10,41 +10,34 @@ import Foundation
 import UIKit
 
 enum Rate: String {
-    case eur = "EUR"
-    case gbp = "GBP"
-    case jpy = "JPY"
-    case brl = "BRL"
+    case cop = "COP"
+    case mxn = "MXN"
     case usd = "USD"
 
     var name: String {
         switch self {
-        case .eur:
-            return "EU Euro"
-        case .gbp:
-            return "UK Pounds"
-        case .jpy:
-            return "Japan Yen"
-        case .brl:
-            return "Brazil Reais"
+        case .cop:
+            return NSLocalizedString("cop", comment: "")
+        case .mxn:
+            return NSLocalizedString("mxn", comment: "")
         case .usd:
-            return "US Dollar"
+            return NSLocalizedString("usd", comment: "")
         }
     }
 
     var color: UIColor {
         switch self {
-        case .eur:
+        case .cop:
             return .systemRed
-        case .gbp:
+        case .mxn:
             return .systemBlue
-        case .jpy:
-            return .systemOrange
-        case .brl:
-            return .systemYellow
         case .usd:
             return .systemGreen
         }
     }
 
-    static let allRates: [Rate] = [.gbp, .eur, .jpy, .brl, .usd]
+    static let allRates: [Rate] = [.cop, .mxn, .usd]
+
+    static let availableRates: [String] = Rate.allRates.map { $0.name }
+
 }
