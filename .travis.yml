@@ -1,4 +1,6 @@
+os: osx
 language: swift
-xcode_project: CurrencyConverter.xcodeproj # path to your xcodeproj folder
-xcode_scheme: CurrencyConverter
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+osx_image: xcode11.2
+script:
+    - xcodebuild clean test -project CurrencyConverter.xcodeproj -scheme CurrencyConverter -destination "platform=iOS Simulator,name=iPhone 11,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+
