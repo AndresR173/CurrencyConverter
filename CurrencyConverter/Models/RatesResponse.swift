@@ -13,3 +13,13 @@ struct RatesResponse: Codable {
     var date: Date?
     var rates: [String: Double]
 }
+
+extension Dictionary where Key == String, Value == Double {
+    func getRates() -> [CurrencyRate] {
+        return self.compactMap {
+            guard let rate = Rate(rawValue: $0.key) else { return nil}
+
+            return CurrencyRate(rate: rate, value: $0.value)
+        }
+    }
+}

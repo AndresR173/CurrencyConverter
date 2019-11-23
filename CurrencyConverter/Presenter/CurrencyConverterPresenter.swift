@@ -12,8 +12,6 @@ protocol CurrencyConverterPresenterView: class {
     func displayValues(_ values: [DataEntry], animated: Bool)
 }
 
-typealias CurrencyRate = (Rate, Double)
-
 class CurrencyConverterPresenter {
 
     // MARK: - Properties
@@ -41,18 +39,19 @@ class CurrencyConverterPresenter {
         guard let value = value,
             let doubleValue = Double(value),
             doubleValue > 0,
-            let rates = self.rates,
-            let maxRate = rates.max(by: { $0.1 < $1.1 }) else { return }
+            let rates = self.rates else { return }
 
-        let maxValue = maxRate.1 * doubleValue
+        self.view?.displayValues(rates.getDataEntries(for: base, value: doubleValue), animated: true)
+    }
 
-        let dataEntries: [DataEntry] = rates.compactMap {
-            guard $0.0 != base else { return nil }
-            let value = (doubleValue * $0.1) / maxValue
-            return DataEntry(color: $0.0.color, height: Float(value), textValue: String(format: "%0.2f", doubleValue * $0.1), title: $0.0.name)
+    func updateRates(for index: Int) {
+        guard  let rate = Rate.allRates.first(where: { $0.name == Rate.availableRates[index] }) else {
+            return
         }
 
-        self.view?.displayValues(dataEntries, animated: true)
+        base = rate
+
+        getRates()
     }
 
     private func resetRates() {
@@ -68,29 +67,11 @@ class CurrencyConverterPresenter {
         ConverterRepository.getRates(from: base) { [weak self] result in
             switch result {
             case .success(let response):
-                let rates: [CurrencyRate] = response.rates.compactMap {
-                    guard let rate = Rate(rawValue: $0.key) else { return nil}
-
-                    return (rate, $0.value)
-                }
-
-                self?.rates = rates
-
+                self?.rates = response.rates.getRates()
                 self?.didEnterValue(self?.lastValue)
             case .failure(_):
                 self?.rates = nil
-                break
             }
         }
-    }
-
-    func updateRates(for index: Int) {
-        guard  let rate = Rate.allRates.first(where: { $0.name == Rate.availableRates[index] }) else {
-            return
-        }
-
-        base = rate
-
-        getRates()
     }
 }
