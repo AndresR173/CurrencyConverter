@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		419CBBA823CFF07400838783 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 419CBBA723CFF07400838783 /* Intents.intentdefinition */; };
 		BA44EC4123883827007F247A /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4023883827007F247A /* ViewController+Extensions.swift */; };
 		BA44EC44238847D3007F247A /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC43238847D3007F247A /* Rates.swift */; };
 		BA44EC4623884A4E007F247A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4523884A4E007F247A /* Constants.swift */; };
@@ -54,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		419CBBA023CFEF4B00838783 /* CurrencyConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CurrencyConverter.entitlements; sourceTree = "<group>"; };
+		419CBBA223CFF00F00838783 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		419CBBA323CFF00F00838783 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		419CBBA723CFF07400838783 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		BA44EC4023883827007F247A /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BA44EC43238847D3007F247A /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		BA44EC4523884A4E007F247A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -112,9 +117,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		419CBBA123CFF00F00838783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				419CBBA223CFF00F00838783 /* Intents.framework */,
+				419CBBA323CFF00F00838783 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		419CBBA623CFF06000838783 /* Siri+Intents */ = {
+			isa = PBXGroup;
+			children = (
+				419CBBA723CFF07400838783 /* Intents.intentdefinition */,
+			);
+			path = "Siri+Intents";
+			sourceTree = "<group>";
+		};
 		BA44EC3823882F02007F247A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				419CBBA623CFF06000838783 /* Siri+Intents */,
 				BADB8B1C238972FC0084B841 /* ThirdParty */,
 				BA44EC4523884A4E007F247A /* Constants.swift */,
 				BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */,
@@ -210,6 +233,7 @@
 				BA5677F223882E00009ACD44 /* CurrencyConverter */,
 				BA56780C23882E04009ACD44 /* CurrencyConverterTests */,
 				BA5677F123882E00009ACD44 /* Products */,
+				419CBBA123CFF00F00838783 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +249,7 @@
 		BA5677F223882E00009ACD44 /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				419CBBA023CFEF4B00838783 /* CurrencyConverter.entitlements */,
 				BA44EC3B23882F60007F247A /* App */,
 				BA44EC3C23883055007F247A /* Controllers */,
 				BA44EC42238847C7007F247A /* Models */,
@@ -443,6 +468,7 @@
 				BA44EC4923884B37007F247A /* ConverterRepository.swift in Sources */,
 				BADB8B2D238973820084B841 /* BeautifulBarChartPresenter.swift in Sources */,
 				BADB8B2F238973820084B841 /* BeautifulBarChart.swift in Sources */,
+				419CBBA823CFF07400838783 /* Intents.intentdefinition in Sources */,
 				BADB8B262389736C0084B841 /* UIBezierPathExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,15 +626,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CurrencyConverter/CurrencyConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL5CTQ2N5S;
+				DEVELOPMENT_TEAM = 47WD53H47N;
 				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andres.rojas.CurrencyConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andresrojas.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,15 +646,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CurrencyConverter/CurrencyConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL5CTQ2N5S;
+				DEVELOPMENT_TEAM = 47WD53H47N;
 				INFOPLIST_FILE = "$(SRCROOT)/CurrencyConverter/App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andres.rojas.CurrencyConverter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andresrojas.CurrencyConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
