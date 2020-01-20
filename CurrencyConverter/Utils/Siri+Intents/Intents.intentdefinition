@@ -9,40 +9,26 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>pxHNBz</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>19B88</string>
+	<string>19A602</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>11B500</string>
+	<string>11C29</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>11.2.1</string>
+	<string>11.3</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
 			<string>generic</string>
-			<key>INIntentConfigurable</key>
-			<true/>
 			<key>INIntentDescription</key>
 			<string>Get currency rates</string>
 			<key>INIntentDescriptionID</key>
 			<string>Efi8cZ</string>
 			<key>INIntentInput</key>
 			<string>from</string>
+			<key>INIntentKeyParameter</key>
+			<string>from</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>1</integer>
-			<key>INIntentManagedParameterCombinations</key>
-			<dict>
-				<key>from</key>
-				<dict>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Get current ${from}</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>LXU9mf</string>
-					<key>INIntentParameterCombinationUpdatesLinked</key>
-					<true/>
-				</dict>
-			</dict>
 			<key>INIntentName</key>
 			<string>Currency</string>
 			<key>INIntentParameterCombinations</key>

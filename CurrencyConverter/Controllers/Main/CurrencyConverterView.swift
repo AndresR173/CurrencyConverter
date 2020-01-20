@@ -79,17 +79,27 @@ class CurrencyConverterView: UIView {
         return barChart
     }()
 
-    lazy var siriButton: INUIAddVoiceShortcutButton = {
-        var button: INUIAddVoiceShortcutButton!
-        if #available(iOS 13.0, *) {
-            button = INUIAddVoiceShortcutButton(style: .automatic)
-        } else {
-            button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-        }
+    private lazy var convertButton: UIButton = {
+        let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Convert", for: .normal)
+
+        button.addTarget(self, action: #selector(convertRate), for: .touchUpInside)
 
         return button
     }()
+
+//    lazy var siriButton: INUIAddVoiceShortcutButton = {
+//        var button: INUIAddVoiceShortcutButton!
+//        if #available(iOS 13.0, *) {
+//            button = INUIAddVoiceShortcutButton(style: .automatic)
+//        } else {
+//            button = INUIAddVoiceShortcutButton(style: .whiteOutline)
+//        }
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//
+//        return button
+//    }()
 
     // MARK: - Properties
 
@@ -125,7 +135,8 @@ class CurrencyConverterView: UIView {
         addSubview(stackView)
         addSubview(barChart)
         addSubview(ratesSegmentedControl)
-        addSubview(siriButton)
+//        addSubview(siriButton)
+        addSubview(convertButton)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: readableContentGuide.topAnchor, constant: 16),
@@ -135,8 +146,11 @@ class CurrencyConverterView: UIView {
             ratesSegmentedControl.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
             ratesSegmentedControl.centerXAnchor.constraint(equalTo: centerXAnchor),
 
-            siriButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
-            siriButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            convertButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
+            convertButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+
+//            siriButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
+//            siriButton.centerXAnchor.constraint(equalTo: centerXAnchor),
 
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -151,8 +165,12 @@ class CurrencyConverterView: UIView {
 
     // MARK: - Helpers
 
+    @objc private func convertRate() {
+        textFieldHandler?(billsTextField.text)
+    }
+
     @objc private func textFieldDidChange(_ textField: UITextField) {
-        textFieldHandler?(textField.text)
+
     }
 
     func updateDataEntries(_ dataEntries: [DataEntry], animated: Bool) {
