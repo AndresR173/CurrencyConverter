@@ -1,5 +1,7 @@
 # CurrencyConverter
-[![Build Status](https://travis-ci.com/afr0man17/CurrencyConverter.svg?branch=master)](https://travis-ci.com/afr0man17/CurrencyConverter)
+![Travis Build Status](https://travis-ci.com/AndresR173/CurrencyConverter.svg)
+
+![GitHub Build Status](https://github.com/AndresR173/CurrencyConverter/workflows/Swift/badge.svg)
 
 A simple currency converter built in Swift
 
