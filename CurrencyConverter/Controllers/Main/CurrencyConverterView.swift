@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IntentsUI
 
 class CurrencyConverterView: UIView {
 
@@ -47,6 +48,8 @@ class CurrencyConverterView: UIView {
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         textField.layer.cornerRadius = 7
         textField.textAlignment = .center
+        textField.layer.borderWidth = 0.5
+        textField.returnKeyType = .done
 
         if #available(iOS 13.0, *) {
             textField.backgroundColor = .systemGray5
@@ -76,6 +79,18 @@ class CurrencyConverterView: UIView {
         barChart.translatesAutoresizingMaskIntoConstraints = false
 
         return barChart
+    }()
+
+    private lazy var convertButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Convert", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 7
+
+        button.addTarget(self, action: #selector(convertRate), for: .touchUpInside)
+
+        return button
     }()
 
     // MARK: - Properties
@@ -112,6 +127,7 @@ class CurrencyConverterView: UIView {
         addSubview(stackView)
         addSubview(barChart)
         addSubview(ratesSegmentedControl)
+        addSubview(convertButton)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: readableContentGuide.topAnchor, constant: 16),
@@ -120,6 +136,10 @@ class CurrencyConverterView: UIView {
 
             ratesSegmentedControl.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24),
             ratesSegmentedControl.centerXAnchor.constraint(equalTo: centerXAnchor),
+
+            convertButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
+            convertButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            convertButton.widthAnchor.constraint(equalToConstant: 100),
 
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -134,8 +154,12 @@ class CurrencyConverterView: UIView {
 
     // MARK: - Helpers
 
+    @objc private func convertRate() {
+        textFieldHandler?(billsTextField.text)
+    }
+
     @objc private func textFieldDidChange(_ textField: UITextField) {
-        textFieldHandler?(textField.text)
+
     }
 
     func updateDataEntries(_ dataEntries: [DataEntry], animated: Bool) {
