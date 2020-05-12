@@ -13,14 +13,6 @@ class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView
 
     // MARK: - Properties
 
-    private lazy var usdIntent: CurrencyIntent = {
-        let intent = CurrencyIntent()
-        intent.from = "rate"
-        intent.suggestedInvocationPhrase = "Get current rate"
-
-        return intent
-    }()
-
     private let presenter = CurrencyConverterPresenter()
 
     // MARK: - LifeCycle
@@ -43,8 +35,6 @@ class CurrencyConvernterViewController: BaseViewController<CurrencyConverterView
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-//        customView.siriButton.delegate = self
-//        customView.siriButton.shortcut = INShortcut(intent: usdIntent)
     }
 
     // MARK: - Helpers

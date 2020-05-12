@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419CBBA823CFF07400838783 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 419CBBA723CFF07400838783 /* Intents.intentdefinition */; };
 		BA44EC4123883827007F247A /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4023883827007F247A /* ViewController+Extensions.swift */; };
 		BA44EC44238847D3007F247A /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC43238847D3007F247A /* Rates.swift */; };
 		BA44EC4623884A4E007F247A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44EC4523884A4E007F247A /* Constants.swift */; };
@@ -58,7 +57,6 @@
 		419CBBA023CFEF4B00838783 /* CurrencyConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CurrencyConverter.entitlements; sourceTree = "<group>"; };
 		419CBBA223CFF00F00838783 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		419CBBA323CFF00F00838783 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		419CBBA723CFF07400838783 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		BA44EC4023883827007F247A /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BA44EC43238847D3007F247A /* Rates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
 		BA44EC4523884A4E007F247A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -126,18 +124,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		419CBBA623CFF06000838783 /* Siri+Intents */ = {
-			isa = PBXGroup;
-			children = (
-				419CBBA723CFF07400838783 /* Intents.intentdefinition */,
-			);
-			path = "Siri+Intents";
-			sourceTree = "<group>";
-		};
 		BA44EC3823882F02007F247A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				419CBBA623CFF06000838783 /* Siri+Intents */,
 				BADB8B1C238972FC0084B841 /* ThirdParty */,
 				BA44EC4523884A4E007F247A /* Constants.swift */,
 				BA5677FC23882E00009ACD44 /* CurrencyConverter.xcdatamodeld */,
@@ -468,7 +457,6 @@
 				BA44EC4923884B37007F247A /* ConverterRepository.swift in Sources */,
 				BADB8B2D238973820084B841 /* BeautifulBarChartPresenter.swift in Sources */,
 				BADB8B2F238973820084B841 /* BeautifulBarChart.swift in Sources */,
-				419CBBA823CFF07400838783 /* Intents.intentdefinition in Sources */,
 				BADB8B262389736C0084B841 /* UIBezierPathExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

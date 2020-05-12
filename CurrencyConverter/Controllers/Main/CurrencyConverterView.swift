@@ -48,6 +48,8 @@ class CurrencyConverterView: UIView {
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         textField.layer.cornerRadius = 7
         textField.textAlignment = .center
+        textField.layer.borderWidth = 0.5
+        textField.returnKeyType = .done
 
         if #available(iOS 13.0, *) {
             textField.backgroundColor = .systemGray5
@@ -83,23 +85,13 @@ class CurrencyConverterView: UIView {
         let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Convert", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 7
 
         button.addTarget(self, action: #selector(convertRate), for: .touchUpInside)
 
         return button
     }()
-
-//    lazy var siriButton: INUIAddVoiceShortcutButton = {
-//        var button: INUIAddVoiceShortcutButton!
-//        if #available(iOS 13.0, *) {
-//            button = INUIAddVoiceShortcutButton(style: .automatic)
-//        } else {
-//            button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-//        }
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//
-//        return button
-//    }()
 
     // MARK: - Properties
 
@@ -135,7 +127,6 @@ class CurrencyConverterView: UIView {
         addSubview(stackView)
         addSubview(barChart)
         addSubview(ratesSegmentedControl)
-//        addSubview(siriButton)
         addSubview(convertButton)
 
         NSLayoutConstraint.activate([
@@ -148,9 +139,7 @@ class CurrencyConverterView: UIView {
 
             convertButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
             convertButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-
-//            siriButton.topAnchor.constraint(equalTo: ratesSegmentedControl.bottomAnchor, constant: 8),
-//            siriButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            convertButton.widthAnchor.constraint(equalToConstant: 100),
 
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
