@@ -1,5 +1,5 @@
 # CurrencyConverter
-![Travis Build Status](https://travis-ci.com/AndresR173/CurrencyConverter.svg)
+[![Build Status](https://travis-ci.com/AndresR173/CurrencyConverter.svg?branch=master)](https://travis-ci.com/AndresR173/CurrencyConverter)
 
 ![GitHub Build Status](https://github.com/AndresR173/CurrencyConverter/workflows/Swift/badge.svg)
 
